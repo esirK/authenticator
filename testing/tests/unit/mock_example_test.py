@@ -1,0 +1,12 @@
+import unittest
+from mock import Mock
+
+
+class TestMocking(unittest.TestCase):
+    def test_mock_method_returns(self):
+        my_mock = Mock()
+        my_mock.my_method.return_value = "[2,3,4,6,7]"
+        self.assertEqual("[2,3,4,6,7]", my_mock.my_method())
+
+if __name__ == '__main__':
+    unittest.main()
